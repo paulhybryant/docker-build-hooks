@@ -12,4 +12,4 @@ for arch in ${ARCH[@]}; do
   echo "docker push ${DOCKER_REPO}:${arch}"
   docker push ${DOCKER_REPO}:${arch}
 done
-docker push ${DOCKER_REPO}:amd64 ${DOCKER_REPO}:latest
+docker tag ${DOCKER_REPO}:amd64 ${DOCKER_REPO}:latest
